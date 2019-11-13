@@ -8,6 +8,7 @@ def get_truncated_normal(mean=0, sd=1, low=0, upp=10):
 def l96_truth_step(X, Y, h, F, b, c):
     import numpy as np
     """
+    Code for this function was based on https://github.com/djgagne/lorenz_gan
     Calculate the time increment in the X and Y variables for the Lorenz '96 "truth" model.
 
     Args:
@@ -107,7 +108,7 @@ def run_lorenz96_truth(x_initial, y_initial, h, f, b, c, time_step, num_steps, b
 
 def generate_L96(num_images = 10, K = 4, J = 4, time_step = 0.01, num_steps = 50000, 
                  test_mode=False, l96_var = 'XY'):
-    '''Code for this function was based on https://github.com/djgagne/lorenz_gan'''
+    '
     import numpy as np
     import os   
     
